@@ -15,8 +15,8 @@ function init() {
   console.log("hit")
   inquirer.prompt(  {
     type: 'list',
-    message: 'Would you like to add another Team Member?',
-    choices: ['view all departments', 'Intern', 'No, the team is complete'],
+    message: 'Would you like to do?',
+    choices: ['View All Departments', 'View All Roles', 'View All Employees', 'Add a Department', 'Add a Role', 'Add an Employee', 'Update an Employee Role', 'Quit'],
     name: 'choices',
 }).then(answers => {
      console.log(answers);
