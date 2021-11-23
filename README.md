@@ -1,7 +1,7 @@
 # Employee-Tracker
 
 ## Description
-
+The Employee Tracker is a CLI application that is meant to assist with the management of employees for any company! View & Add Departments, Roles, Employees as well as update an Employee's role in the company. 
 
 ## Table of Contents
 - [Installation](#installation)
@@ -11,16 +11,13 @@
 - [Contact](#contact)
 
 ## Installation
-
+Clone Repository to your computer, open command line once in the repository, and follow the prompts! 
 
 ## Usage
-Deployed Heroku App: https://cryptic-caverns-53634.herokuapp.com/
-
-![Screenshot of Opening Webpage]()
-![Screenshot of Notes Webpage]()
+Video Walkthrough of Application: https://watch.screencastify.com/v/IJUUTljclTkypGUJdoDy
 
 ## Credits
-
+My amazing tutor, Ask BCS Assistants, and the always reliable Olsen Ogouchi all helped with the completion of this application
 
 ## License
 MIT License
@@ -46,6 +43,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Contact
+Email me at mattflanagan40@gmail.com for any additional questions or comments about the application
 
 ## How to Contribute
 If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
