@@ -147,15 +147,13 @@ function addRole() {
     db.query(sqlDept, 
       function(err,data){
         if (err) throw err;
-        // console.log(data)
         var myData = data.map(({name, id})=>({name: name, value: id})) 
-  // console.log(myData)
   inquirer
   .prompt([
     {
       type: 'input',
       message: 'Please enter the name of the new role',
-      name: "name",
+      name: "roleName",
     },
     {
       type: 'input',
@@ -166,19 +164,19 @@ function addRole() {
       type: 'list',
       message: 'Please select which department the new role with be in',
       choices: myData,
-      name: "department",
+      name: "deptName",
     },
   ])
   .then(function(response){
-    const titleName=response.Title
-    const salaryName= response.Salary
-    const departmentName=response.someName
-    const parameters = [titleName, salaryName, departmentName]
+    const roleTitle=response.roleName
+    const salaryName= response.salary
+    const departmentName=response.deptName
+    const parameters = [roleTitle, salaryName, departmentName]
     const sql=`INSERT INTO role(title, salary, department_id)
     VALUES(?, ?, ?)`;
     db.query(sql, parameters, function(err){
       if (err) throw err;
-      console.log('Added ' + titleName + " to Roles!"); 
+      console.log('Added ' + roleTitle + " to Roles!"); 
     viewRoles()
     })
     })
