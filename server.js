@@ -79,7 +79,7 @@ function(err, res){
 if (err) throw err
 
 console.log(cTable.getTable(res));
-  init()
+init()
 });
 }
 
@@ -87,14 +87,13 @@ console.log(cTable.getTable(res));
 function viewRoles() {
   // presented with the job title, role id, the department that role belongs to, and the salary for that role
     // Query database
-db.query('SELECT * FROM role', function (err, results) {
-  console.log(results);
-});
-
-// Default response for any other request (Not Found)
-app.use((req, res) => {
-  res.status(404).end();
-});
+    db.query("SELECT role.id, role.title, role.salary, department.name AS department FROM role JOIN department ON role.department_id = department.id ORDER BY role.id;",
+    function(err, res){
+   if (err) throw err
+  
+   console.log(cTable.getTable(res));
+   init()
+    })
 }
 
 // View Employees
@@ -171,9 +170,9 @@ function addRole() {
     },
   ])
   .then(function(response){
-    const titleName=response.title
-    const salaryName= response.salary
-    const departmentName=response.name
+    const titleName=response.Title
+    const salaryName= response.Salary
+    const departmentName=response.someName
     const parameters = [titleName, salaryName, departmentName]
     const sql=`INSERT INTO role(title, salary, department_id)
     VALUES(?, ?, ?)`;
